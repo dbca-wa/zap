@@ -60,6 +60,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'dpaw_utils.middleware.SSOLoginMiddleware',                 # DPaW SSO
 )
 
 # MIGRATIONS CONFIGURATION
