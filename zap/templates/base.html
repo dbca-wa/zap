@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,9 +31,9 @@
   </head>
 
   <body>
-
+    <div class="mainarea">
     <div class="m-b">
-      <nav class="navbar navbar-dark navbar-static-top bg-inverse">
+      <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
         <div class="container">
           <a class="navbar-brand" href="/">zap</a>
           <button type="button" class="navbar-toggler hidden-sm-up pull-xs-right" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
@@ -72,7 +73,7 @@
       </nav>
     </div>
 
-    <div class="container">
+    <div class="container push15pxdown lift50pxup">
 
       {% if messages %}
           {% for message in messages %}
@@ -80,13 +81,26 @@
           {% endfor %}
       {% endif %}
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
+      {% block content %}{% endblock content %}
 
     </div> <!-- /container -->
 
     {% block modal %}{% endblock modal %}
+
+    <!-- Footer -->
+    {% block footer %}
+    <div id="footer">
+        <div class="container">
+            <p class="nav-link credit">
+                &copy; 2012&ndash;2016 Department of Parks and Wildlife
+                {% block extra_footer %}{% endblock %}
+            </p>
+        </div><!-- /.container -->
+    </div><!-- /#footer -->
+    {% endblock %}
+    <!-- /Footer -->
+
+    </div> <!-- /mainarea -->
 
     <!-- Le javascript
     ================================================== -->
@@ -108,4 +122,3 @@
     {% endblock javascript %}
   </body>
 </html>
- 
