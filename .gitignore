@@ -61,6 +61,10 @@ zap/media/
 
 # Hitch directory
 tests/.hitch
+hitchreqs.txt
 
 # MailHog binary
 mailhog
+
+# Static files
+staticfiles/*
