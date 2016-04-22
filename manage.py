@@ -2,6 +2,7 @@
 import os
 import sys
 
+# use confy
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
